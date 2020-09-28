@@ -13,7 +13,7 @@ var velocity = Vector2()
 func _physics_process(delta):
 	velocity += delta * acceleration
 
-	if Input.is_action_pressed("game_mod"):
+	if Input.is_action_pressed("pl_useItem"):
 		if Input.is_action_pressed("ui_up"):
 			velocity.y += -1 * JET_SPEED * delta
 		elif Input.is_action_pressed("ui_down"):
@@ -48,7 +48,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("game_mod"):
+	if Input.is_action_pressed("pl_useItem"):
 		if Input.is_action_pressed("ui_right"):
 			$AnimatedSprite.play("right_fireExt")
 		elif Input.is_action_pressed("ui_left"):
